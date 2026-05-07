@@ -1,5 +1,5 @@
-name: 'Buddy Download Package'
-description: 'Download packages from Buddy CI/CD platform'
+name: 'Buddy Download Artifact'
+description: 'Download artifacts from Buddy CI/CD platform'
 author: 'Marcel Gańczarczyk'
 runs:
   using: 'node24'
@@ -12,20 +12,20 @@ inputs:
     description: 'Buddy project name (URL handle)'
     required: true
   identifier:
-    description: 'Package identifier with optional version (e.g., my-package or my-package@1.0.0)'
+    description: 'Artifact identifier with optional version (e.g., my-artifact or my-artifact@1.0.0)'
     required: true
   directory:
     description: 'Path to the directory to download to'
     required: true
   merge:
-    description: 'Merge contents of the directory with package'
+    description: 'Merge contents of the directory with artifact'
     required: false
   replace:
-    description: 'Replace contents of the directory with package'
+    description: 'Replace contents of the directory with artifact'
     required: false
 outputs:
-  package_path:
-    description: 'The path where the package was downloaded'
+  artifact_path:
+    description: 'The path where the artifact was downloaded'
 branding:
   icon: 'download'
   color: 'blue'

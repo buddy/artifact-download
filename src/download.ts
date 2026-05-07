@@ -25,10 +25,10 @@ export function checkBuddyCredentials(): void {
 }
 
 export async function downloadPackage(inputs: IInputs): Promise<IOutputs> {
-  info(`Downloading package: ${inputs.identifier} to ${inputs.directory}`)
+  info(`Downloading artifact: ${inputs.identifier} to ${inputs.directory}`)
 
   const args = [
-    'package',
+    'artifact',
     'download',
     inputs.identifier,
     inputs.directory,
